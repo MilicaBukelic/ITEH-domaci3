@@ -1,23 +1,34 @@
 import React from 'react';
 import {BsPlusLg,BsDashLg} from "react-icons/bs";
-
-function JedanProizvod({proizvod,onAdd}) {
+import "./Proizvodi.css";
+function JedanProizvod({proizvod,onAdd,uKorpi}) {
   //console.log(props);
 
    // function onAdd(title){
    //     console.log("Dodat proizvod " + title);
-    //}
+  //}
+  function CardHover(e){
+    e.preventDefault();
+    console.log(this);
+  }
 
-  return <div className='kartica' style={{margin: 1+"em", borderStyle:"dotted"}}>
-      <img  className='slika_proizvoda' src="https:/picsum.photos/200" alt="Neka slika"/>
-      <div className="podaci">
+  return <div className={uKorpi === 0 ? "kartica" : "kartica-korpa"} >
+
+      <div className={uKorpi === 0 ? 'slikaProizvoda' : 'slikaProizvodaUKorpi'}>
+        <img src={proizvod.image} alt="Neka slika"/>
+      </div>
+      <div className={uKorpi === 0 ? 'podaci' : 'podaciKorpa'}>
           <h3 className="card-title">{proizvod.title}</h3>
           <p className="card-text">{proizvod.description}</p>
+          {uKorpi === 0 ? (<div>
+            <button className='dugmici' onClick={() => onAdd(proizvod.title, proizvod.id)}> <BsPlusLg/> </button>
+            <button className='dugmici'> <BsDashLg/> </button>
+            </div>) : (<div className='kolicinaICena'> <h3> Kolicina: {proizvod.amount}</h3> 
+            <h3> Cena: {proizvod.price} RSD</h3></div>)}
+          
       </div>
-      <button className='dugmici' onClick={() => onAdd(proizvod.title)}> <BsPlusLg/> </button>
-      <button className='dugmici'> <BsDashLg/> </button>
+      
   </div>;
 }
 
 export default JedanProizvod;
-

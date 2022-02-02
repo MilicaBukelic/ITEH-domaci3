@@ -30,41 +30,7 @@
   margin-left: 5px;
 }
 
-.svi_proizvodi {
-  display: flex;
-  margin: 20px;
-}
-
-.kartica {
-  border-style: solid;
-  border-width: 2px;
-  border-color: rgb(211, 211, 211);
-  border-radius: 10px;
-  max-width: 200px;
-}
-
-.slika_proizvoda {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.podaci {
-  margin: 10px;
-}
-
-.dugmici {
-  background-color: cornflowerblue;
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: 3px;
-  border-radius: 3px;
-  border-width: 0px;
-}
-
-a {
+.navBarLink {
   color: white;
   font-style: oblique;
   text-decoration: none;
@@ -73,21 +39,44 @@ a {
 
 .cart-container {
   margin: 20px;
+  width: 80%;
 }
 
-.card-cart {
+.kartica-korpa {
   display: flex;
   flex-direction: row;
   border-style: solid;
   border-width: 2px;
   border-color: rgb(211, 211, 211);
   border-radius: 10px;
-  max-width: 500px;
+  width: 100%;
+  margin:20px 0;
+}
+.kolicinaICena{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width:100%;
 }
 
-.card-img-left {
+.slikaProizvodaUKorpi {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  position: relative;
+  width: 50%;
+  height: 300px;
+  overflow: hidden;
 }
-
+.slikaProizvodaUKorpi img{
+  max-width: 100%;
+  max-height: auto;
+  display: flex;
+  align-items: center;
+}
+.card-text{
+  width:60%;
+  margin-left: auto;
+  margin-right: auto;
+  height: fit-content;
+}
 

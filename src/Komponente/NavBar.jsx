@@ -4,9 +4,9 @@ import {Link} from "react-router-dom";
 function NavBar({cartNum}) {
   //const cartNum = 0;
   return <div className='navBar'>
-      <Link to="/"> Katalog </Link>
+      <Link className='navBarLink' to="/"> Katalog </Link>
       <div className='cart-items'>
-        <Link to={"/korpa"}>
+        <Link className='navBarLink' to={"/korpa"}>
         <BsFillCartFill/>
         </Link>
         <p className="cart-num"> {cartNum} </p>
