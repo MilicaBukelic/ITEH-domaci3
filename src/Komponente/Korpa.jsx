@@ -8,7 +8,7 @@ const Korpa = ({products,price}) => {
             {products.map((prod) =>(
                 <JedanProizvod proizvod={prod} key={prod.id} uKorpi={1}/>
             ))}
-            <h3>Ukupna cena: {price}</h3>
+            <h3 className='ukc'>Ukupna cena: {price} RSD</h3>
         </div>
     )
 }

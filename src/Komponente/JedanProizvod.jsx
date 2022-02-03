@@ -1,5 +1,4 @@
 import React from 'react';
-import {BsPlusLg,BsDashLg} from "react-icons/bs";
 import "./Proizvodi.css";
 function JedanProizvod({proizvod,onAdd,uKorpi}) {
   //console.log(props);
@@ -21,8 +20,7 @@ function JedanProizvod({proizvod,onAdd,uKorpi}) {
           <h3 className="card-title">{proizvod.title}</h3>
           <p className="card-text">{proizvod.description}</p>
           {uKorpi === 0 ? (<div>
-            <button className='dugmici' onClick={() => onAdd(proizvod.title, proizvod.id)}> <BsPlusLg/> </button>
-            <button className='dugmici'> <BsDashLg/> </button>
+            <button className='dugmici' onClick={() => onAdd(proizvod.title, proizvod.id)}> Kupi </button>
             </div>) : (<div className='kolicinaICena'> <h3> Kolicina: {proizvod.amount}</h3> 
             <h3> Cena: {proizvod.price} RSD</h3></div>)}
           
