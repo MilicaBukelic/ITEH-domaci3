@@ -1,11 +1,6 @@
 import React from 'react';
 import "./Proizvodi.css";
 function JedanProizvod({proizvod,onAdd,uKorpi}) {
-  //console.log(props);
-
-   // function onAdd(title){
-   //     console.log("Dodat proizvod " + title);
-  //}
   function CardHover(e){
     e.preventDefault();
     console.log(this);
